@@ -1,6 +1,7 @@
 .idea/
 ingresso.iml
 target/
-.project
-.settings
+.project/
+.settings/
 .classpath
+
