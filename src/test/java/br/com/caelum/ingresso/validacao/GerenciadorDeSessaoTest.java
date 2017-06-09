@@ -89,20 +89,6 @@ public class GerenciadorDeSessaoTest {
 		Assert.assertTrue(gerenciador.cabe(new Sessao(LocalTime.parse("13:00:00"), filme2, sala)));
 	
 	}
-	
-	
-	
-	
-	
-	
-
-
-
-
-
-
-
-
 }
 
 
