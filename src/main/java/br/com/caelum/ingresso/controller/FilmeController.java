@@ -40,7 +40,7 @@ public class FilmeController {
     private ImdbClient client;
 
 
-    @GetMapping({"/filme", "/filme/{id}"})
+    @GetMapping({"/admin/filme", "/admin/filme/{id}"})
     public ModelAndView form(@PathVariable("id") Optional<Integer> id, Filme filme){
 
         ModelAndView modelAndView = new ModelAndView("filme/filme");
@@ -55,7 +55,7 @@ public class FilmeController {
     }
 
 
-    @PostMapping("/filme")
+    @PostMapping("/admin/filme")
     @Transactional
     public ModelAndView salva(@Valid Filme filme, BindingResult result){
 
@@ -82,7 +82,7 @@ public class FilmeController {
     }
 
 
-    @DeleteMapping("/filme/{id}")
+    @DeleteMapping("/admin/filme/{id}")
     @ResponseBody
     @Transactional
     public void delete(@PathVariable("id") Integer id){

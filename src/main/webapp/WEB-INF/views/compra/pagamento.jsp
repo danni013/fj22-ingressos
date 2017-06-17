@@ -7,6 +7,7 @@
 <ingresso:template>
     <jsp:body>
    		<div class=" col-md-6 col-md-offset-3">
+   		<c:set var="bindingResult" value="${requestScope['org.springframework.validation.BindingResult.cartao']}"/>
         <form action="/compra/comprar" method="post">
             <table class="table table-hover ">
                 <thead>
@@ -74,6 +75,15 @@
                 </div>
             </div>
 
+			<div class="form-group">
+				<div class="col-md-6">
+					<label for="vencimento">Vencimento:</label>
+					<input id="vencimento" type="text" name="vencimento" class="form-control">
+					<c:forEach items="${bindingResult.getFieldErrors('vencimento')}" var="error">
+                    	<span class="text-danger">${error.defaultMessage}</span>
+                	</c:forEach>
+				</div>	
+			</div>
 
             <div class="form-group">
                 <div class="col-md-12">
