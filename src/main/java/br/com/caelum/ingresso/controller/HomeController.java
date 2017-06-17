@@ -11,6 +11,7 @@ public class HomeController {
 
     @GetMapping("/")
     public String home(){
-        return "home";
+        System.out.println("Teste HomeController");
+    	return "home";
     }
 }
